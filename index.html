@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-Encrypt</title>
+    <link rel="shortcut icon" href="./assets/images/favicon.jfif" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/a6ec884a07.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#"rel="noopener noreferrer" title="Visit my website"><img src="./assets/images/Top.png" alt="Logo-Alura"></a>
+        <nav>
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <div class="nav__item--history" id="nav-history">
+                        <i class="fa-solid fa-book-open"></i>
+                        <span data-section="navbar" data-value="history">History</span>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="nav__item--theme" id="nav-theme">
+                        <i class="fa-regular fa-lightbulb"></i>
+                        <span data-section="navbar" data-value="theme">Light-mode</span>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="nav__item--language" id="nav-language">
+                        <i class="fa-solid fa-language"></i>
+                        <span data-section="navbar" data-value="language">Eng</span>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="history">
+            <div class="header-history">
+                <button class="close-history">X</button>
+                <h2 data-section="history" data-value="title">History</h2>
+            </div>
+            <div>
+                <h2 data-section="history" data-value="encryptedHistory">Last encrypt messages</h2>
+                <ul></ul>
+            </div>
+            <div>
+                <h2 data-section="history" data-value="decryptedHistory">Last decrypt messages</h2>
+                <ul></ul>
+            </div>
+            <button class="btn--history-delete" data-section="history" data-value="delete-history">Delete History</button>
+        </section>
+        <section class="input-section">
+            <button class="btn--clear-text" id="btn-clear">x</button>
+            <textarea name="input-text" cols="30" rows="10" class="input-text" id="input-text" placeholder="Type here" data-section="input-section" data-value="placeholder"></textarea>
+            <div class="advertising">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <p data-section="input-section" data-value="advertisingMessage">use only lower case</p>
+            </div>
+            <div class="buttons">
+                <button class="btn--encrypt" data-section="input-section" data-value="btn-encrypt" aria-label="Encrypt text">Encrypt</button>
+                <button class="btn--decrypt" data-section="input-section" data-value="btn-decrypt" aria-label="Decrypt text">Decrypt</button>
+            </div>
+        </section>
+        <section class="output-section">
+            <img src="./assets/images/Muñeco.png" alt="Encrypt-Challenge-Image">
+            <div>
+                <h2 data-section="output-section" data-value="tittle" class="output-title">Any message found</h2>
+                <p data-section="output-section" data-value="message" class="output-message">Enter the text you wish to encrypt or decrypt</p>
+            </div>
+            <div>
+                <button class="btn--copiar">Copiar</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p data-section="footer" data-value="author">
+            <strong class="copy">&copy;</strong>  
+            2024 Encrypt-Challenge. All rights reserved By Juan José Villamizar
+        </p>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <ul>
+            <li><a href="#" data-section="footer" data-value="terms">Terms & Conditions</a></li>
+            <li><a href="#" data-section="footer" data-value="privacy">Privacy Policy</a></li>
+        </ul>
+    </footer>
+    <div id="snackbarError" data-section="messages-user" data-value="error">Please type a message</div>
+    <div id="snackbar" data-section="messages-user" data-value="copied">Copied</div>
+    <div id="snackbar" data-section="messages-user" data-value="message-encrypt">Message successfully encrypted</div>
+    <div id="snackbar" data-section="messages-user" data-value="message-decrypt">Message successfully decrypt</div>
+</body>
+<script src="./assets/js/app.js"></script>
+</html>
