@@ -52,11 +52,13 @@
             <button class="btn--history-delete" data-section="history" data-value="delete-history">Delete History</button>
         </section>
         <section class="input-section">
-            <button class="btn--clear-text" id="btn-clear">x</button>
-            <textarea name="input-text" cols="30" rows="10" class="input-text" id="input-text" placeholder="Type here" data-section="input-section" data-value="placeholder"></textarea>
+            <div class="input-text">
+                <button class="btn--clear-text" id="btn-clear">x</button>
+                <textarea name="text-area" cols="30" rows="10" class="text-area" id="input-text" placeholder="Type here" data-section="input-section" data-value="placeholder"></textarea>
+            </div>
             <div class="advertising">
                 <i class="fa-solid fa-circle-exclamation"></i>
-                <p data-section="input-section" data-value="advertisingMessage">use only lower case</p>
+                <p data-section="input-section" data-value="advertisingMessage">Use only lower case</p>
             </div>
             <div class="buttons">
                 <button class="btn--encrypt" data-section="input-section" data-value="btn-encrypt" aria-label="Encrypt text">Encrypt</button>
@@ -64,31 +66,31 @@
             </div>
         </section>
         <section class="output-section">
-            <img src="./assets/images/Muñeco.png" alt="Encrypt-Challenge-Image">
+                <img src="./assets/images/Muñeco.png" alt="Encrypt-Challenge-Image">
             <div>
                 <h2 data-section="output-section" data-value="tittle" class="output-title">Any message found</h2>
                 <p data-section="output-section" data-value="message" class="output-message">Enter the text you wish to encrypt or decrypt</p>
             </div>
             <div>
-                <button class="btn--copiar">Copiar</button>
+                <button class="btn--copy" data-section="output-section" data-value="btn-copy">Copy</button>
             </div>
         </section>
     </main>
-    <footer>
+    <footer class="footer">
         <p data-section="footer" data-value="author">
             <strong class="copy">&copy;</strong>  
-            2024 Encrypt-Challenge. All rights reserved By Juan José Villamizar
+            2024 Encrypt-Challenge All rights reserved By 
+            <a href="#">Juan José Villamizar <i class="fa-brands fa-linkedin"></i></a>
         </p>
-        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-        <ul>
+        <ul class="footer-nav">
             <li><a href="#" data-section="footer" data-value="terms">Terms & Conditions</a></li>
             <li><a href="#" data-section="footer" data-value="privacy">Privacy Policy</a></li>
         </ul>
     </footer>
-    <div id="snackbarError" data-section="messages-user" data-value="error">Please type a message</div>
-    <div id="snackbar" data-section="messages-user" data-value="copied">Copied</div>
-    <div id="snackbar" data-section="messages-user" data-value="message-encrypt">Message successfully encrypted</div>
-    <div id="snackbar" data-section="messages-user" data-value="message-decrypt">Message successfully decrypt</div>
+    <div id="snackbarError" class="snackbar" data-section="messages-user" data-value="error">Please type a message</div>
+    <div id="snackbarCopied"  class="snackbar" data-section="messages-user" data-value="copied">Copied</div>
+    <div id="snackbarEncrypted"  class="snackbar" data-section="messages-user" data-value="message-encrypt">Message successfully encrypted</div>
+    <div id="snackbarDecrypted"  class="snackbar" data-section="messages-user" data-value="message-decrypt">Message successfully decrypted</div>
 </body>
 <script src="./assets/js/app.js"></script>
 </html>
