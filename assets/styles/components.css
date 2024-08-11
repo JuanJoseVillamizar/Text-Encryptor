@@ -1,0 +1,46 @@
+/* Text Area */
+.text-area{
+    border: none;
+    width: 90%;
+    height: 100%;
+    background-color: var(--light-blue-100);
+    color: var(--dark-blue-300);
+    font-size: var(--font-size--32);
+    }
+.text-area:focus{
+    outline: none;
+    }
+    .text-area::placeholder{
+        color: var(--dark-blue-300);
+        font-size: var(--font-size--32);
+    }
+/*Button clear text */
+.btn--clear-text{
+    text-align: start;
+    background: transparent;
+    color: var(--gray-400);
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 10px;
+}
+
+/*Button encrypt*/
+.btn--encrypt{
+    background-color: var(--dark-blue-300);
+    color: var(--white);
+    font-size: 1rem;
+}
+
+/*Button encrypt*/
+.btn--decrypt{
+    background-color: var(--white);
+    color: var(--dark-blue-300);
+    font-size: 1rem;
+    border: 1px solid var(--dark-blue-300);
+}
+/* Message output*/
+.output-message{
+    color: var(--gray-400);
+    font-size: 1rem;
+    font-weight: 400;
+}
