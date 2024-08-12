@@ -69,22 +69,22 @@
                 <textarea name="text-area" cols="30" rows="10" class="text-area" id="input-text" placeholder="Type here" data-section="input-section" data-value="placeholder"></textarea>
             </div>
             <div class="advertising">
-                <i class="fa-solid fa-circle-exclamation"></i>
-                <p data-section="input-section" data-value="advertisingMessage">Use only lower case</p>
+                <i class="fa-solid fa-circle-exclamation advertising-icon" id="advertising-icon"></i>
+                <p class="advertising-text" id="advertising-text" data-section="input-section" data-value="advertisingMessage">Use only lower case</p>
             </div>
             <div class="buttons">
-                <button class="btn--encrypt" data-section="input-section" data-value="btn-encrypt" aria-label="Encrypt text">Encrypt</button>
-                <button class="btn--decrypt" data-section="input-section" data-value="btn-decrypt" aria-label="Decrypt text">Decrypt</button>
+                <button class="btn--encrypt" id="btn--encrypt" data-section="input-section" data-value="btn-encrypt" aria-label="Encrypt text">Encrypt</button>
+                <button class="btn--decrypt" id="btn--decrypt" data-section="input-section" data-value="btn-decrypt" aria-label="Decrypt text">Decrypt</button>
             </div>
         </section>
-        <section class="output-section">
-                <img src="./assets/images/Muñeco.png" alt="Encrypt-Challenge-Image">
+        <section class="output-section" id="output-section">
+                <img src="./assets/images/Muñeco.png" alt="Encrypt-Challenge-Image" id="output-image">
             <div>
-                <h2 data-section="output-section" data-value="title" class="output-title">Any message found</h2>
-                <p data-section="output-section" data-value="message" class="output-message">Enter the text you wish to encrypt or decrypt</p>
+                <h2 data-section="output-section" data-value="title" class="output-title" id="output-title">Any message found</h2>
+                <p data-section="output-section" data-value="message" class="output-message" id="output-message">Enter the text you wish to encrypt or decrypt</p>
             </div>
             <div>
-                <button class="btn--copy" data-section="output-section" data-value="btn-copy">Copy</button>
+                <button class="btn--copy" id="btn--copy" data-section="output-section" data-value="btn-copy">Copy</button>
             </div>
         </section>
     </main>
