@@ -1,0 +1,34 @@
+{
+    "navbar":{
+        "history":"History",
+        "theme":"Light-mode",
+        "language":"Eng"
+    },
+    "history":{
+        "title":"History",
+        "encryptedHistory":"Last encrypt messages",
+        "decryptedHistory":"Last decrypt messages",
+        "btn-delete-history": "Delete History"
+    },
+    "input-section":{
+        "placeholder":"Type here",
+        "advertisingMessage":"Use only lower case",
+        "btn-encrypt":"Encrypt",
+        "btn-decrypt":"Decrypt"
+    },
+    "output-section":{
+        "title":"Any message found",
+        "message":"Enter the text you wish to encrypt or decrypt"
+    },
+    "footer":{
+        "author":"2024 Encrypt-Challenge All rights reserved By ",
+        "terms":"Terms & Conditions",
+        "privacy":"Privacy Policy"
+    },
+    "messages-user":{
+        "success-encrypt":"Message encrypted successfully",
+        "copied":"Copied",
+        "success-decrypt":"Message decrypted successfully",
+        "error":"Please type a message"
+    }
+}
