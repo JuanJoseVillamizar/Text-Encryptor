@@ -14,26 +14,31 @@ export function getCurrentLanguage (element) {
 }
 async function changeLanguage (language){
     try {
-        const textsToChange = document.querySelectorAll('[data-section]');
         const response = await fetch(`../../assets/data/languages/${language}.json`);
         if (!response.ok){
             throw new Error(`Error fetching language data: ${response.status}`);
         }
         const data = await response.json();
-        for(const textToChange of textsToChange ){
-            const section = textToChange.dataset.section
-            const value = textToChange.dataset.value
-            textToChange.innerHTML = data[section][value]
-        }
-        const placeholder =  data['input-section']['placeholder']
-        if (placeholder) {
-            const textarea = document.getElementById('input-text');
-            textarea.value='';
-            if (textarea) {
-                textarea.placeholder = placeholder;
-            }
-        }
+        updateTexts(data)
     } catch (error) {
         console.log(error)
     }
 }
+function updateTexts(data) {
+    const textsToChange = document.querySelectorAll('[data-section]');
+    textsToChange.forEach(textToChange =>{
+        const section = textToChange.dataset.section
+        const value = textToChange.dataset.value
+        textToChange.innerHTML = data[section][value]
+    })
+    const placeholder =  data['input-section']['placeholder']
+    if (placeholder) {
+        const textarea = document.getElementById('input-text');
+        textarea.value='';
+        if (textarea) {
+            textarea.placeholder = placeholder;
+        }
+    }
+}
+
+
