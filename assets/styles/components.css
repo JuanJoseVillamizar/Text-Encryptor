@@ -33,7 +33,7 @@
 }
 
 /*Button encrypt*/
-.btn--decrypt{
+.btn--decrypt, .btn--copy{
     background-color: var(--white);
     color: var(--dark-blue-300);
     font-size: 1rem;
