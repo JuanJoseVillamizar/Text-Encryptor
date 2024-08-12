@@ -31,14 +31,26 @@
                         <span data-section="navbar" data-value="language">Eng</span>
                         <i class="fa-solid fa-caret-down"></i>
                     </div>
+                    <ul class="hidden languages" id="languages">
+                        <li class="option">
+                            <div class="languages_item" data-language="En" id="language-en">
+                                <span>English</span>
+                            </div>
+                        </li>
+                        <li class="option">
+                            <div class="languages_item" data-language="Es" id="language-es">
+                                <span>Español</span>
+                            </div>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </nav>
     </header>
     <main class="container">
-        <section class="history">
+        <section class="history hidden" id="history">
             <div class="header-history">
-                <button class="close-history">X</button>
+                <button class="close-history" id="close-history">X</button>
                 <h2 data-section="history" data-value="title">History</h2>
             </div>
             <div>
@@ -49,7 +61,7 @@
                 <h2 data-section="history" data-value="decryptedHistory">Last decrypt messages</h2>
                 <ul></ul>
             </div>
-            <button class="btn--history-delete" data-section="history" data-value="delete-history">Delete History</button>
+            <button class="btn--history-delete" id="delete-history" data-section="history" data-value="btn-delete-history">Delete History</button>
         </section>
         <section class="input-section">
             <div class="input-text">
@@ -68,7 +80,7 @@
         <section class="output-section">
                 <img src="./assets/images/Muñeco.png" alt="Encrypt-Challenge-Image">
             <div>
-                <h2 data-section="output-section" data-value="tittle" class="output-title">Any message found</h2>
+                <h2 data-section="output-section" data-value="title" class="output-title">Any message found</h2>
                 <p data-section="output-section" data-value="message" class="output-message">Enter the text you wish to encrypt or decrypt</p>
             </div>
             <div>
@@ -83,14 +95,14 @@
             <a href="#">Juan José Villamizar <i class="fa-brands fa-linkedin"></i></a>
         </p>
         <ul class="footer-nav">
-            <li><a href="#" data-section="footer" data-value="terms">Terms & Conditions</a></li>
-            <li><a href="#" data-section="footer" data-value="privacy">Privacy Policy</a></li>
+            <li data-section="footer" data-value="terms">Terms & Conditions</li>
+            <li data-section="footer" data-value="privacy">Privacy Policy</li>
         </ul>
     </footer>
-    <div id="snackbarError" class="snackbar" data-section="messages-user" data-value="error">Please type a message</div>
-    <div id="snackbarCopied"  class="snackbar" data-section="messages-user" data-value="copied">Copied</div>
-    <div id="snackbarEncrypted"  class="snackbar" data-section="messages-user" data-value="message-encrypt">Message successfully encrypted</div>
-    <div id="snackbarDecrypted"  class="snackbar" data-section="messages-user" data-value="message-decrypt">Message successfully decrypted</div>
+    <div id="snackbarError" class="snackbar hidden" data-section="messages-user" data-value="error">Please type a message</div>
+    <div id="snackbarCopied"  class="snackbar hidden" data-section="messages-user" data-value="copied">Copied</div>
+    <div id="snackbarEncrypted"  class="snackbar hidden" data-section="messages-user" data-value="success-encrypt">Message encrypted successfully</div>
+    <div id="snackbarDecrypted"  class="snackbar hidden" data-section="messages-user" data-value="success-decrypt">Message decrypted successfully</div>
 </body>
-<script src="./assets/js/app.js"></script>
+<script type="module" src="./assets/js/app.js"></script>
 </html>
