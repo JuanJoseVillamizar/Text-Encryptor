@@ -18,7 +18,8 @@
     },
     "output-section":{
         "title":"Ningún mensaje fue encontrado",
-        "message":"Ingresa el texto que desees encriptar o desencriptar."
+        "message":"Ingresa el texto que desees encriptar o desencriptar.",
+        "btn-copy": "Copiar"
     },
     "footer":{
         "author":"2024 Desafio-Encriptador Todos los derechos reservados",

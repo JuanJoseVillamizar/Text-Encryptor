@@ -18,7 +18,8 @@
     },
     "output-section":{
         "title":"Any message found",
-        "message":"Enter the text you wish to encrypt or decrypt"
+        "message":"Enter the text you wish to encrypt or decrypt",
+        "btn-copy": "Copy"
     },
     "footer":{
         "author":"2024 Encrypt-Challenge All rights reserved By ",
