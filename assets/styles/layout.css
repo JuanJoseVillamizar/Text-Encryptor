@@ -11,6 +11,10 @@
     display: flex;
     gap: 1.3rem;
 }
+.languages{
+    flex-direction: column;
+}
+/*Main*/
 .container{
     display: flex;
     flex-direction: column;
@@ -23,12 +27,23 @@
 }
 .input-text{
     position: relative;
-    height: 300px;
 }
-.history,.snackbar{
-    display: none;
-    visibility: hidden;
+/*history*/
+.history{
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--light-blue-400);
 }
+.close-history{
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
 .btn--clear-text{
     position: absolute;
     top: 0;
@@ -76,6 +91,7 @@
 }
 .footer-nav{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     gap: .6rem;
 }
@@ -98,14 +114,15 @@
 @media (min-width: 992px) { 
     .container{
         flex-direction: row;
+        justify-content: space-around;
         gap: 4rem;
     }
     .input-section{
-        width: 60%;
+        width: 50%;
     }
     .output-section{
         justify-content: center;
-        width: 30%;
+        width: 25%;
     }
     .output-section img{
         display: block;

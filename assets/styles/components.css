@@ -3,10 +3,11 @@
     border: none;
     width: 90%;
     height: 100%;
-    background-color: var(--light-blue-100);
+    background-color: transparent;
     color: var(--dark-blue-300);
     font-size: var(--font-size--32);
     }
+
 .text-area:focus{
     outline: none;
     }
@@ -14,8 +15,8 @@
         color: var(--dark-blue-300);
         font-size: var(--font-size--32);
     }
-/*Button clear text */
-.btn--clear-text{
+/*Button clear text and close history */
+.btn--clear-text,.close-history{
     text-align: start;
     background: transparent;
     color: var(--gray-400);
@@ -43,4 +44,18 @@
     color: var(--gray-400);
     font-size: 1rem;
     font-weight: 400;
+}
+
+/* History delete */
+.btn--history-delete{
+    color: var(--dark-blue-300) ;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 20px;
+    width: 70%;
+}
+
+.btn--history-delete:hover{
+    border: 1px solid red;
+    color: red;
 }
