@@ -44,11 +44,13 @@ The encryption "keys" used in this application are:
 1. Clone this repository:
    ```bash
    git clone https://github.com/JuanJoseVillamizar/Text-Encryptor.git
-Navigate to the project directory:
 
-bash
-cd <YOUR_DIRECTORY/Text-Encryptor>
-Open the index.html file in your browser to view the application in action.
+2.Navigate to the project directory:
+   ```bash
+       cd Text-Encryptor 
+   ```
+
+3.Open the index.html file in your browser to view the application in action.
 
 ## Usage
 - Enter the text you want to encrypt or decrypt in the corresponding text field.
