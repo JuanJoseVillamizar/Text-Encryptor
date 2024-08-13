@@ -22,7 +22,7 @@
                 <li class="nav-item">
                     <div class="nav__item--theme" id="nav-theme">
                         <i class="fa-regular fa-lightbulb"></i>
-                        <span data-section="navbar" data-value="theme">Light-mode</span>
+                        <span id="theme" data-section="navbar" data-value="theme">Dark-mode</span>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -54,12 +54,12 @@
                 <h2 data-section="history" data-value="title">History</h2>
             </div>
             <div>
-                <h2 data-section="history" data-value="encryptedHistory">Last encrypt messages</h2>
-                <ul></ul>
+                <h3 data-section="history" data-value="encryptedHistory">Last encrypt messages</h3>
+                <ul id="encryptedHistory"></ul>
             </div>
             <div>
-                <h2 data-section="history" data-value="decryptedHistory">Last decrypt messages</h2>
-                <ul></ul>
+                <h3 data-section="history" data-value="decryptedHistory">Last decrypt messages</h3>
+                <ul id="decryptedHistory"></ul>
             </div>
             <button class="btn--history-delete" id="delete-history" data-section="history" data-value="btn-delete-history">Delete History</button>
         </section>

@@ -1,9 +1,9 @@
 import {toggle} from './toggle.js'
 import {getCurrentLanguage} from './languages.js'
 import {changeTheme} from './theme.js'
-import { encrypt,decrypt,btnDelete,copyBtn,addClickListener } from './encryptor.js';
-
-// Selectors 
+import { encrypt,decrypt,btnDelete,copyBtn,addClickListener,autoResizeTextarea } from './encryptor.js';
+import {initializeHistory} from './historyManager.js';
+import {applySavedTheme} from './theme.js'
 const elements = {
     languages: document.getElementById('languages'),
     toggleLanguage: document.getElementById('nav-language'),
@@ -17,17 +17,30 @@ const elements = {
     deleteText: document.getElementById('btn-clear'),
     input: document.getElementById('input-text'),
     copy: document.getElementById('btn--copy'),
-    output: document.getElementById('output-message')
+    output: document.getElementById('output-message'),
+    listEncrypt: document.getElementById('encryptedHistory'),
+    listDecrypt: document.getElementById('decryptedHistory')
 };  
 //Functions toggle
 toggle(elements.languageEn, elements.languages);
 toggle(elements.languageEs, elements.languages);
 toggle(elements.toggleLanguage, elements.languages);
 toggle(elements.toggleHistory, elements.history);
+toggle(elements.listEncrypt, elements.history);
+toggle(elements.listDecrypt, elements.history);
 toggle(elements.closeHistory, elements.history);
-getCurrentLanguage(elements.languages);
-changeTheme()
+elements.input.addEventListener('input', autoResizeTextarea);
+
+
+
 btnDelete(elements.deleteText, elements.input);
 copyBtn(elements.copy, elements.output);
 addClickListener(elements.btnEncrypt,encrypt)
 addClickListener(elements.btnDecrypt,decrypt)
+document.addEventListener('DOMContentLoaded', ()=>{
+    initializeHistory()
+    getCurrentLanguage(elements.languages);
+    changeTheme();
+    applySavedTheme();
+    autoResizeTextarea();
+});
