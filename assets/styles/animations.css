@@ -1,5 +1,5 @@
 /* The snackbar - position it at the bottom and in the middle of the screen */
-#snackbarError {
+#snackbarError, #snackbarDecrypted, #snackbarEncrypted, #snackbarCopied {
     visibility: hidden; /* Hidden by default. Visible on click */
     min-width: 250px; /* Set a default minimum width */
     background-color: #D9534F; /* Black background color */
@@ -11,11 +11,35 @@
     z-index: 1; /* Add a z-index if needed */
     left: 50%; /* Center the snackbar horizontally */
     bottom: 30px; /* 30px from the bottom */
+    font-size: 1.5rem;
     transform: translateX(-50%); /* Adjust position to center */
 }
 
+
+#snackbarCopied{
+    background-color: #474646; /* Black background color */
+    color: #FFFFFF; /* White text color */
+    padding: 8px;
+    min-width: 50px;
+    font-size: 1rem;
+}
+
+#snackbarEncrypted {
+    background-color: var(--dark-blue-200); /* Black background color */
+    color: var(--black); /* White text color */
+    padding: 10px; /* Padding */
+}
+
+#snackbarDecrypted {
+    background-color: var(--dark-blue-200); /* Black background color */
+    color: var(--white); /* White text color */
+    padding: 10px; /* Padding */
+}
 /* Show the snackbar when clicking on a button (class added with JavaScript) */
-#snackbarError.show {
+#snackbarError.show, 
+#snackbarDecrypted.show, 
+#snackbarEncrypted.show,  
+#snackbarCopied.show {
     visibility: visible; /* Show the snackbar */
     /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
     However, delay the fade out process for 2.5 seconds */

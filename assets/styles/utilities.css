@@ -1,8 +1,6 @@
 .hidden{
     display: none;
-    visibility: hidden;
 }
 .visible{
     display: flex;
-    visibility: visible;
 }

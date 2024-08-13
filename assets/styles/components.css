@@ -1,8 +1,11 @@
 /* Text Area */
 .text-area{
     border: none;
+    overflow-y: auto;
+    flex-grow: 1;
+    box-sizing: border-box;
+    resize: vertical;
     width: 90%;
-    height: 100%;
     background-color: transparent;
     color: var(--dark-blue-300);
     font-size: var(--font-size--32);
@@ -49,6 +52,7 @@
 /* History delete */
 .btn--history-delete{
     color: var(--dark-blue-300) ;
+    background-color: var(--dark-blue-200);
     font-size: 1rem;
     cursor: pointer;
     padding: 20px;
