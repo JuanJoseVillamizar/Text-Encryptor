@@ -1,7 +1,7 @@
 {
     "navbar":{
         "history":"History",
-        "theme":"Light-mode",
+        "theme":"Dark-mode",
         "language":"Eng"
     },
     "history":{

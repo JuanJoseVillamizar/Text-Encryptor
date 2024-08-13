@@ -1,11 +1,16 @@
 export function getCurrentLanguage (element) {
     try {
+        const savedLanguage = localStorage.getItem('language');
+        if (savedLanguage) {
+            changeLanguage(savedLanguage);
+        }
         element.addEventListener('click', (e)=>{
             const clickedElement = e.target.closest('.languages_item');
-            if (clickedElement) {
+                if (clickedElement) {
                 const language = clickedElement.getAttribute('data-language');
+                localStorage.setItem('language', language);
                 changeLanguage(language)
-            }
+                }
         })
     } catch (error) {
         console.log(error)
@@ -40,5 +45,3 @@ function updateTexts(data) {
         }
     }
 }
-
-
