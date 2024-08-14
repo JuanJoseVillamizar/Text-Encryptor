@@ -19,7 +19,8 @@ export function getCurrentLanguage (element) {
 }
 async function changeLanguage (language){
     try {
-        const response = await fetch(`../../assets/data/languages/${language}.json`);
+        const response = await fetch(`/assets/data/languages/${language}.json`);
+        console.log(response)
         if (!response.ok){
             throw new Error(`Error fetching language data: ${response.status}`);
         }
